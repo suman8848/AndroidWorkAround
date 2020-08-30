@@ -1,4 +1,4 @@
-package com.example.stagezerowithoutdagger
+package com.example.androidpractise
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.example.stagezerowithoutdagger
+package com.example.androidpractise
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
