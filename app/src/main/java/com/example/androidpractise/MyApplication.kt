@@ -1,8 +1,9 @@
 package com.example.androidpractise.stagezerowithoutdagger
 
 import android.app.Application
-import com.example.androidpractise.stageonewithoutdagger.data.local.DatabaseService
-import com.example.androidpractise.stageonewithoutdagger.data.remote.NetworkService
+import com.example.androidpractise.stagetwowithoutdaggerimproved.data.local.DatabaseService
+import com.example.androidpractise.stagetwowithoutdaggerimproved.data.local.NetworkService
+import com.example.androidpractise.stagetwowithoutdaggerimproved.di.DependencyComponent
 
 class MyApplication : Application() {
 
@@ -13,7 +14,10 @@ class MyApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         //changes of stageonewithoutdagger
-        networkService = NetworkService(this, "SOME_API_KEY")
-        databaseService = DatabaseService(this, "dummy_db", 1)
+//        networkService = NetworkService(this, "SOME_API_KEY")
+//        databaseService = DatabaseService(this, "dummy_db", 1)
+
+//        new changes
+        DependencyComponent.inject(this)
     }
 }
