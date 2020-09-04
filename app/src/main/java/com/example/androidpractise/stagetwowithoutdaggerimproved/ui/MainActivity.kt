@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.androidpractise.R
-import com.example.androidpractise.stagetwowithoutdaggerimproved.di.DependencyComponent
 import com.example.androidpractise.stagezerowithoutdagger.MyApplication
 
 class MainActivity : AppCompatActivity() {
@@ -19,7 +18,8 @@ class MainActivity : AppCompatActivity() {
 //        var myApplication = application as MyApplication
 //        mainViewModel = MainViewModel(myApplication.databaseService, myApplication.networkService)
         //New changes
-        DependencyComponent.inject(this)
+        //Commented out due to dagger implementation
+//        DependencyComponent.inject(this)
 
         var tvData: TextView = findViewById(R.id.tvData)
         tvData.text = mainViewModel.getSomeData()
